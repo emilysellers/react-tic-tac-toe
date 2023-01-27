@@ -41,4 +41,12 @@ const useGameContext = () => {
   return context;
 };
 
+const handleBoxClick = () => {
+  if (currentPlayer === 'X') {
+    setCurrentPLayer('O');
+  }
+  //   setBoxes(currentPlayer);
+  console.log('handleBoxClick fired');
+};
+
 export { GameProvider, useGameContext };

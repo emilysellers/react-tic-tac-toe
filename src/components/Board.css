@@ -2,3 +2,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
+
+main {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(254, 255, 237);
+  align-items: center;
+}

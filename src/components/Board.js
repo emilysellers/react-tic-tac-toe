@@ -4,15 +4,16 @@ import Box from './Box.js';
 import './Board.css';
 
 export default function Board() {
-  const { boxes } = useGameContext();
+  const { boxes, gameMessage } = useGameContext();
   return (
-    <div>
+    <main>
       <h1>Tic Tac Toe!</h1>
+      <h2>{gameMessage}</h2>
       <div className="box-container">
-        {boxes.map((box) => (
-          <Box key={box.space} />
+        {boxes.map((box, index) => (
+          <Box key={index} {...{ box }} />
         ))}
       </div>
-    </div>
+    </main>
   );
 }

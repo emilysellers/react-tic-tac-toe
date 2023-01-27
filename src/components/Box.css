@@ -1,7 +1,12 @@
 .box {
   width: 200px;
   height: 200px;
-  border: 4px solid black;
+  border: 3px solid black;
   background-color: rgba(16, 115, 82, 0.505);
   margin: 20px;
+  border-radius: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
 }

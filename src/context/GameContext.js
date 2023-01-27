@@ -8,12 +8,12 @@ const GameProvider = ({ children }) => {
   const [active, setActive] = useState(true);
   const [gameMessage, setGameMessage] = useState('Your turn X');
   const [boxes, setBoxes] = useState([
-    { space: 0, content: '' },
-    { space: 1, content: '' },
-    { space: 2, content: '' },
+    { space: 0, content: 'X' },
+    { space: 1, content: 'O' },
+    { space: 2, content: 'X' },
     { space: 3, content: '' },
     { space: 4, content: '' },
-    { space: 5, content: '' },
+    { space: 5, content: 'O' },
     { space: 6, content: '' },
     { space: 7, content: '' },
     { space: 8, content: '' },

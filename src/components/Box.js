@@ -2,13 +2,12 @@ import React from 'react';
 import { useGameContext } from '../context/GameContext.js';
 import './Box.css';
 
-export default function Box({ box, index }) {
-  const { active, setCurrentPlayer, currentPlayer, gameBoard, setGameBoard, setGameMessage } =
-    useGameContext();
+export default function Box({ box }) {
+  const { active, setCurrentPlayer, currentPlayer, setGameMessage } = useGameContext();
 
   const handleClick = () => {
     // If the space already contains an ‘X’ or an ‘O’, return
-    console.log('box stuff', box.content);
+    // console.log('box stuff', box.content);
     if (box.content === 'X' || box.content === 'O') {
       return;
     }
@@ -19,8 +18,8 @@ export default function Box({ box, index }) {
     // Otherwise, set the space’s content to the current player
     else {
       box.content = currentPlayer;
-      console.log(index);
-      console.log(gameBoard[index].content);
+      //   console.log(index);
+      //   console.log(gameBoard[index].content);
     }
     // Switch current player
     if (currentPlayer === 'X') {
@@ -30,7 +29,7 @@ export default function Box({ box, index }) {
     }
     // reset gameMessage
     setGameMessage(`Your turn ${currentPlayer}`);
-    console.log('currentPlayer at end of handleClick:', currentPlayer);
+    // console.log('currentPlayer at end of handleClick:', currentPlayer);
   };
 
   return (

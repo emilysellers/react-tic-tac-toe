@@ -18,6 +18,17 @@ const GameProvider = ({ children }) => {
     { space: 7, content: '' },
     { space: 8, content: '' },
   ]);
+
+  const handleClick = () => {
+    if (currentPlayer === 'X') {
+      setCurrentPlayer('O');
+    } else {
+      setCurrentPlayer('X');
+    }
+    console.log(currentPlayer);
+    setGameMessage(`Your turn ${currentPlayer}`);
+  };
+
   return (
     <GameContext.Provider
       value={{
@@ -39,14 +50,6 @@ const GameProvider = ({ children }) => {
 const useGameContext = () => {
   const context = useContext(GameContext);
   return context;
-};
-
-const handleBoxClick = () => {
-  if (currentPlayer === 'X') {
-    setCurrentPLayer('O');
-  }
-  //   setBoxes(currentPlayer);
-  console.log('handleBoxClick fired');
 };
 
 export { GameProvider, useGameContext };

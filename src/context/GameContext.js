@@ -7,7 +7,7 @@ const GameProvider = ({ children }) => {
   const [currentPlayer, setCurrentPlayer] = useState('X');
   const [active, setActive] = useState(true);
   const [gameMessage, setGameMessage] = useState('Your turn X');
-  const [boxes, setBoxes] = useState([
+  const [gameBoard, setGameBoard] = useState([
     { space: 0, content: '' },
     { space: 1, content: 'X' },
     { space: 2, content: '' },
@@ -28,8 +28,8 @@ const GameProvider = ({ children }) => {
         setActive,
         gameMessage,
         setGameMessage,
-        boxes,
-        setBoxes,
+        gameBoard,
+        setGameBoard,
       }}
     >
       {children}

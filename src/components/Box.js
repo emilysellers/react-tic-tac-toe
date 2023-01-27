@@ -32,7 +32,11 @@ export default function Box({ box }) {
       setCurrentPlayer('X');
     }
     // reset gameMessage
-    setGameMessage(`Your turn ${currentPlayer}`);
+    if (currentPlayer === 'X') {
+      setGameMessage('Your turn O');
+    } else if (currentPlayer === 'O') {
+      setGameMessage('Your turn X');
+    }
     // console.log('currentPlayer at end of handleClick:', currentPlayer);
   };
 

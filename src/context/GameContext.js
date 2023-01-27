@@ -8,26 +8,16 @@ const GameProvider = ({ children }) => {
   const [active, setActive] = useState(true);
   const [gameMessage, setGameMessage] = useState('Your turn X');
   const [boxes, setBoxes] = useState([
-    { space: 0, content: 'X' },
-    { space: 1, content: 'O' },
-    { space: 2, content: 'X' },
+    { space: 0, content: '' },
+    { space: 1, content: 'X' },
+    { space: 2, content: '' },
     { space: 3, content: '' },
-    { space: 4, content: '' },
-    { space: 5, content: 'O' },
+    { space: 4, content: 'O' },
+    { space: 5, content: '' },
     { space: 6, content: '' },
     { space: 7, content: '' },
     { space: 8, content: '' },
   ]);
-
-  const handleClick = () => {
-    if (currentPlayer === 'X') {
-      setCurrentPlayer('O');
-    } else {
-      setCurrentPlayer('X');
-    }
-    console.log(currentPlayer);
-    setGameMessage(`Your turn ${currentPlayer}`);
-  };
 
   return (
     <GameContext.Provider
@@ -46,6 +36,17 @@ const GameProvider = ({ children }) => {
     </GameContext.Provider>
   );
 };
+
+// function handleClick() {
+//   const { currentPlayer, setCurrentPlayer, setGameMessage } = useGameContext;
+//   if (currentPlayer === 'X') {
+//     setCurrentPlayer('O');
+//   } else {
+//     setCurrentPlayer('X');
+//   }
+//   setGameMessage(`Your turn ${currentPlayer}`);
+//   console.log(currentPlayer);
+// }
 
 const useGameContext = () => {
   const context = useContext(GameContext);

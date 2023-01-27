@@ -28,15 +28,12 @@ export default function Box({ box }) {
     // Switch current player
     if (currentPlayer === 'X') {
       setCurrentPlayer('O');
-    } else {
-      setCurrentPlayer('X');
-    }
-    // reset gameMessage
-    if (currentPlayer === 'X') {
       setGameMessage('Your turn O');
     } else if (currentPlayer === 'O') {
+      setCurrentPlayer('X');
       setGameMessage('Your turn X');
     }
+    // reset gameMessage
     // console.log('currentPlayer at end of handleClick:', currentPlayer);
   };
 

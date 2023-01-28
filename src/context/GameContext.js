@@ -6,7 +6,7 @@ const GameContext = createContext();
 const GameProvider = ({ children }) => {
   const [currentPlayer, setCurrentPlayer] = useState('X');
   const [active, setActive] = useState(true);
-  const [gameMessage, setGameMessage] = useState("You're up X");
+  const [gameMessage, setGameMessage] = useState("You're up X.");
   const [gameBoard, setGameBoard] = useState([
     { space: 0, content: '' },
     { space: 1, content: '' },
@@ -81,7 +81,7 @@ const GameProvider = ({ children }) => {
       (gameBoard[7].content === 'X' || gameBoard[7].content === 'O') &&
       (gameBoard[8].content === 'X' || gameBoard[8].content === 'O')
     ) {
-      return "CAT! We've gotta cat's game 😸";
+      return "We've got a cat's game 😸";
     }
   };
   const checkGameStatus = () => {

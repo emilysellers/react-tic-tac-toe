@@ -4,7 +4,24 @@ import Box from './Box.js';
 import './Board.css';
 
 export default function Board() {
-  const { gameBoard, gameMessage } = useGameContext();
+  const { gameBoard, gameMessage, setGameBoard, setActive, setGameMessage } = useGameContext();
+  const handleButtonClick = () => {
+    const cleanSlate = [
+      { space: 0, content: '' },
+      { space: 1, content: '' },
+      { space: 2, content: '' },
+      { space: 3, content: '' },
+      { space: 4, content: '' },
+      { space: 5, content: '' },
+      { space: 6, content: '' },
+      { space: 7, content: '' },
+      { space: 8, content: '' },
+    ];
+    // setGameBoard(cleanSlate);
+    setGameBoard(cleanSlate);
+    setActive(true);
+    setGameMessage("From the top! You're up X.");
+  };
   return (
     <main>
       <h1>Tic Tac Toe</h1>
@@ -14,6 +31,7 @@ export default function Board() {
           <Box key={index} {...{ box }} {...{ index }} />
         ))}
       </div>
+      <button onClick={() => handleButtonClick()}>Play again</button>
     </main>
   );
 }

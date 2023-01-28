@@ -28,10 +28,10 @@ export default function Box({ box }) {
     // Switch current player
     if (currentPlayer === 'X') {
       setCurrentPlayer('O');
-      setGameMessage("You're up O");
+      setGameMessage("You're up O.");
     } else if (currentPlayer === 'O') {
       setCurrentPlayer('X');
-      setGameMessage("You're up X");
+      setGameMessage("You're up X.");
     }
     // reset gameMessage
     // console.log('currentPlayer at end of handleClick:', currentPlayer);

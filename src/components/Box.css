@@ -1,11 +1,13 @@
 .box {
   width: 150px;
   height: 150px;
-  border: 3px solid black;
-  background-color: rgba(38, 217, 157, 0.505);
+  border: 2px solid black;
+  background-color: rgb(255, 223, 254);
   margin: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 25px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 90px;
+  font-weight: bold;
 }

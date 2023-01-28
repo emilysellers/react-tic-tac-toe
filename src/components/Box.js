@@ -28,10 +28,10 @@ export default function Box({ box }) {
     // Switch current player
     if (currentPlayer === 'X') {
       setCurrentPlayer('O');
-      setGameMessage("You're up O.");
+      setGameMessage("You're up, O.");
     } else if (currentPlayer === 'O') {
       setCurrentPlayer('X');
-      setGameMessage("You're up X.");
+      setGameMessage("You're up, X.");
     }
     // reset gameMessage
     // console.log('currentPlayer at end of handleClick:', currentPlayer);
@@ -39,7 +39,7 @@ export default function Box({ box }) {
 
   return (
     <div className="box" onClick={() => handleClick()}>
-      <h1>{box.content}</h1>
+      <p>{box.content}</p>
     </div>
   );
 }

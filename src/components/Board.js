@@ -2,6 +2,7 @@ import React from 'react';
 import { useGameContext } from '../context/GameContext.js';
 import Box from './Box.js';
 import './Board.css';
+// import background from '../water.jpeg';
 
 export default function Board() {
   const { gameBoard, gameMessage, setGameBoard, setActive, setGameMessage } = useGameContext();
@@ -17,10 +18,9 @@ export default function Board() {
       { space: 7, content: '' },
       { space: 8, content: '' },
     ];
-    // setGameBoard(cleanSlate);
     setGameBoard(cleanSlate);
     setActive(true);
-    setGameMessage("From the top! You're up X.");
+    setGameMessage("From the top! You're up, X.");
   };
   return (
     <main>
@@ -31,7 +31,9 @@ export default function Board() {
           <Box key={index} {...{ box }} {...{ index }} />
         ))}
       </div>
-      <button onClick={() => handleButtonClick()}>Play again</button>
+      <button className="playAgainBtn" onClick={() => handleButtonClick()}>
+        Play again
+      </button>
     </main>
   );
 }

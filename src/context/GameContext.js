@@ -81,7 +81,7 @@ const GameProvider = ({ children }) => {
       (gameBoard[7].content === 'X' || gameBoard[7].content === 'O') &&
       (gameBoard[8].content === 'X' || gameBoard[8].content === 'O')
     ) {
-      return "We've got a cat's game 😸";
+      return "We've got a cat's game.";
     }
   };
   const checkGameStatus = () => {

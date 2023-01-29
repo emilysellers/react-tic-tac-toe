@@ -8,7 +8,6 @@ export default function Box({ box }) {
 
   const handleClick = () => {
     // If the space already contains an ‘X’ or an ‘O’, return
-    // console.log('box stuff', box.content);
     if (box.content === 'X' || box.content === 'O') {
       return;
     }
@@ -21,20 +20,11 @@ export default function Box({ box }) {
       box.content = currentPlayer;
       const newBoard = [...gameBoard];
       setGameBoard(newBoard);
-
-      //   console.log(index);
-      //   console.log(gameBoard[index].content);
     }
     // Switch current player
-    if (currentPlayer === 'X') {
-      setCurrentPlayer('O');
-      setGameMessage("You're up, O.");
-    } else if (currentPlayer === 'O') {
-      setCurrentPlayer('X');
-      setGameMessage("You're up, X.");
-    }
-    // reset gameMessage
-    // console.log('currentPlayer at end of handleClick:', currentPlayer);
+    currentPlayer === 'X'
+      ? setCurrentPlayer('O')(setGameMessage("You're up, O."))
+      : setCurrentPlayer('X')(setGameMessage("You're up, X."));
   };
 
   return (

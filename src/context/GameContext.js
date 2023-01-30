@@ -6,7 +6,7 @@ const GameContext = createContext();
 const GameProvider = ({ children }) => {
   const [currentPlayer, setCurrentPlayer] = useState('X');
   const [active, setActive] = useState(true);
-  const [gameMessage, setGameMessage] = useState("You're up X.");
+  const [gameMessage, setGameMessage] = useState("You're up, X.");
   const [gameBoard, setGameBoard] = useState([
     { space: 0, content: '' },
     { space: 1, content: '' },
@@ -54,7 +54,7 @@ const GameProvider = ({ children }) => {
       gameBoard[2].content === gameBoard[5].content &&
       gameBoard[5].content === gameBoard[8].content
     ) {
-      return gameBoard[2].content;
+      return gameBoard[8].content;
     }
     if (
       gameBoard[0].content === gameBoard[4].content &&
@@ -88,7 +88,7 @@ const GameProvider = ({ children }) => {
     if (!active) return;
     const winner = checkWinner();
     if (winner) {
-      setGameMessage(`You win ${winner}!`);
+      setGameMessage(`You win, ${winner}!`);
       setActive(false);
     }
     const cat = checkCat();

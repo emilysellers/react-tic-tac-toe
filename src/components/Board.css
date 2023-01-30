@@ -1,10 +1,3 @@
-.box-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  padding: 30px;
-  background-color: rgb(49, 49, 49);
-}
-
 main {
   display: flex;
   flex-direction: column;
@@ -29,12 +22,21 @@ h2 {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+.box-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 30px;
+  background-color: rgba(48, 48, 48, 0.849);
+  border-radius: 5px;
+}
+
 .playAgainBtn {
   margin: 15px;
   width: 200px;
-  height: 200px;
+  height: 100px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bold;
   background-color: rgb(247, 129, 168);
+  border-radius: 5px;
 }

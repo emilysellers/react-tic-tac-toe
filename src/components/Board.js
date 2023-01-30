@@ -5,7 +5,8 @@ import './Board.css';
 // import background from '../water.jpeg';
 
 export default function Board() {
-  const { gameBoard, gameMessage, setGameBoard, setActive, setGameMessage } = useGameContext();
+  const { gameBoard, gameMessage, setGameBoard, setActive, setGameMessage, setCurrentPlayer } =
+    useGameContext();
   const handleButtonClick = () => {
     const cleanSlate = [
       { space: 0, content: '' },
@@ -19,6 +20,7 @@ export default function Board() {
       { space: 8, content: '' },
     ];
     setGameBoard(cleanSlate);
+    setCurrentPlayer('X');
     setActive(true);
     setGameMessage("From the top! You're up, X.");
   };

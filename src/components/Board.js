@@ -8,6 +8,10 @@ export default function Board() {
   const { gameBoard, gameMessage, setGameBoard, setActive, setGameMessage, setCurrentPlayer } =
     useGameContext();
   const handleButtonClick = () => {
+    // console.log('====gameBoard===', gameBoard);
+    // const newGameBoard = gameBoard.map((box) => ({ ...box, content: '' }));
+    // console.log('===newGameBoard===', newGameBoard);
+    // setGameBoard(newGameBoard);
     const cleanSlate = [
       { space: 0, content: '' },
       { space: 1, content: '' },

@@ -32,6 +32,7 @@
 @media (max-width: 500px) {
   .box {
     width: 90%;
-    font-size: 80px;
+    height: 80%;
+    font-size: 70px;
   }
 }

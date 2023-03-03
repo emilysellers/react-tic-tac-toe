@@ -40,3 +40,20 @@ h2 {
   background-color: rgb(247, 129, 168);
   border-radius: 5px;
 }
+
+@media (max-width: 550px) {
+  main {
+    width: 100%;
+  }
+  h1 {
+    font-size: 2.8em;
+  }
+  h2 {
+    font-size: 1.7em;
+    margin-top: 5px;
+  }
+  .box-container {
+    width: 85%;
+    padding: 10px;
+  }
+}

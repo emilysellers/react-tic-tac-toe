@@ -2,28 +2,13 @@ import React from 'react';
 import { useGameContext } from '../context/GameContext.js';
 import Box from './Box.js';
 import './Board.css';
-// import background from '../water.jpeg';
 
 export default function Board() {
   const { gameBoard, gameMessage, setGameBoard, setActive, setGameMessage, setCurrentPlayer } =
     useGameContext();
   const handleButtonClick = () => {
-    // console.log('====gameBoard===', gameBoard);
-    // const newGameBoard = gameBoard.map((box) => ({ ...box, content: '' }));
-    // console.log('===newGameBoard===', newGameBoard);
-    // setGameBoard(newGameBoard);
-    const cleanSlate = [
-      { space: 0, content: '' },
-      { space: 1, content: '' },
-      { space: 2, content: '' },
-      { space: 3, content: '' },
-      { space: 4, content: '' },
-      { space: 5, content: '' },
-      { space: 6, content: '' },
-      { space: 7, content: '' },
-      { space: 8, content: '' },
-    ];
-    setGameBoard(cleanSlate);
+    const cleanGameBoard = gameBoard.map((box) => ({ ...box, content: '' }));
+    setGameBoard(cleanGameBoard);
     setCurrentPlayer('X');
     setActive(true);
     setGameMessage("From the top! You're up, X.");

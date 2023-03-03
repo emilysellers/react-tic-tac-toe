@@ -29,9 +29,6 @@ export default function Box({ box }) {
       setCurrentPlayer('X');
       setGameMessage("You're up, X.");
     }
-    // currentPlayer === 'X'
-    //   ? setCurrentPlayer('O')(setGameMessage("You're up, O."))
-    //   : setCurrentPlayer('X')(setGameMessage("You're up, X."));
   };
 
   return (

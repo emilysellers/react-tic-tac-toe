@@ -28,3 +28,10 @@
   border-right: 2px solid rgb(92, 92, 92);
   box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.771);
 }
+
+@media (max-width: 500px) {
+  .box {
+    width: 90%;
+    font-size: 80px;
+  }
+}
